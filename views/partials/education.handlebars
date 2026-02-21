@@ -1,0 +1,34 @@
+{{#section "education-style"}}
+    <style>
+        .educations {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+
+        .educations h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #ff8243;
+        }
+
+        .education h4 {
+            color: #ffc0cb;
+        }
+
+        .education p {
+            color: #069494;
+        }
+    </style>
+{{/section}}
+
+<section class="educations">
+    <h3>Educations: </h3>
+    {{#each educations}}
+    <div class="education">
+        <h4>Studied at {{this.name}} ({{this.from}} - {{this.to}})</h4>
+        <p>{{this.description}}</p>
+    </div>
+    {{/each}}
+</section>

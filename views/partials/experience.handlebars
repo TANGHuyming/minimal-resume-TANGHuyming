@@ -1,0 +1,34 @@
+{{#section "experience-style"}}
+    <style>
+        .experiences {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+
+        .experiences h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #ff8243;
+        }
+
+        .experience h4 {
+            color: #ffc0cb;
+        }
+
+        .experience p {
+            color: #069494;
+        }
+    </style>
+{{/section}}
+
+<section class="experiences">
+    <h3>Expeiences: </h3>
+    {{#each experiences}}
+    <div class="experience">
+        <h4>{{this.role}} at {{this.name}} ({{this.from}} - {{this.to}})</h4>
+        <p>{{this.description}}</p>
+    </div>
+    {{/each}}
+</section>

@@ -1,0 +1,55 @@
+{{#section "home-style"}}
+    <style>
+        .hero {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+
+        .hero h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #ff8243;
+        }
+
+        .hero h3 {
+            color: #ffc0cb;
+        }
+
+        .hero p {
+            color: #069494;
+        }
+    </style>
+{{/section}}
+
+<main style="width: 1024px; margin: 0 auto; background-color: rgb(230, 230, 230); padding: 2rem 1.5rem">
+    {{!-- hero --}}
+    <section class="hero">
+        <h2>{{title}}</h2>
+        <h3>Name: {{name}}</h3>
+        <p>Email: {{email}}</p>
+        <p>Phone: {{telephone}}</p>
+        <p>Skills: {{skills}}</p>
+        {{#unless isWorking}}
+            <p style="color: gray">Not working</p>
+        {{else}}
+            <p style="color: green">Working</p>
+        {{/unless}}
+
+        {{#if isLookingForJob}}
+            <p style="color: green">Looking for work</p>
+        {{else}}
+            <p style="color: gray">Not looking for work</p>
+        {{/if}}
+    </section>
+
+    {{!-- experiences --}}
+    {{> experience}}
+
+    {{!-- education --}}
+    {{> education}}
+
+    {{!-- projects --}}
+    {{> project}}
+</main>
